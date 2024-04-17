@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Gerador</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="site" id="page">
+      <div class="container">
+        <div class="form-box">
+          <div class="progress">
+            <div class="logo">
+              <a href=""
+                >Gerador <br />
+                CV</a
+              >
+            </div>
+            <ul class="progress-steps">
+              <li class="step active">
+                <span>1</span>
+                <p></p>
+              </li>
+              <li class="step">
+                <span>2</span>
+                <p></p>
+              </li>
+              <li class="step">
+                <span>3</span>
+                <p></p>
+              </li>
+            </ul>
+          </div>
+          <form action="pdf.php" method="post">
+            <div class="form-one form-step active">
+              <div class="bg-svg"></div>
+              <h2>Perfil</h2>
+              <p>Montando seu perfil...</p>
+              <div>
+                <label for="">Nome</label>
+                <input
+                  type="text"
+                  placeholder="e.g user"
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="">Celular</label>
+                <input
+                  type="tel"
+                  placeholder="(47)9999-9999"
+                  name="phone"
+                  id="phone"
+                  required
+                />
+              </div>
+              <div>
+                <label for="">Email</label>
+                <input
+                  type="email"
+                  placeholder="user@gmail.com"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="">Linkdin</label>
+                <input
+                  type="text"
+                  placeholder="@user"
+                  name="linkdin"
+                  id="linkdin"
+                  required
+                />
+              </div>
+
+              <label for="">Sobre<br /></label>
+              <input
+                type="text"
+                name="about-desc"
+                id="about-desc"
+                placeholder="Nos conte sobre você"
+              />
+            </div>
+
+            <div class="form-two form-step">
+              <div class="bg-svg"></div>
+              <h2>Educação</h2>
+              <p>Nos conte sobre sua formação mais recente</p>
+              <div>
+                <label for="">Nome do curso</label>
+                <input
+                  type="text"
+                  placeholder="curso, graduação..."
+                  id="education-course"
+                  name="education-course"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="">Nome da Escola</label>
+                <input
+                  type="text"
+                  placeholder="Harvad"
+                  id="education-name"
+                  name="education-name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="">Periodo</label>
+                <input
+                  type="text"
+                  placeholder="2020 - 2024"
+                  name="education-year"
+                  id="education-year"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-three form-step">
+              <div class="bg-svg"></div>
+              <h2>Experiência</h2>
+              <p>
+                Nos conte sobre sua experiencia mais recente<br />
+                no mercado de trabalho
+              </p>
+              <div>
+                <label for="">Nome Empresa</label>
+                <input
+                  type="text"
+                  name="experience-name"
+                  id="experience-name"
+                  placeholder="Empresa"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="">Cargo</label>
+                <input
+                  type="text"
+                  name="experience-function"
+                  id="experience-function"
+                  placeholder="Qual era seu cargo?"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="">Descrisao</label>
+                <input
+                  type="text"
+                  name="experience-desc"
+                  id="experience-desc"
+                  placeholder="O que você fazia por lá?"
+                  required
+                />
+              </div>
+
+              <label for="">Anos atuando<br /></label>
+              <input
+                type="number"
+                name="experience-year"
+                id="experience-year"
+                placeholder="Quantos anos você atuou?"
+              />
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn-prev" id="btn-prev" disabled>
+                Voltar
+              </button>
+              <button type="button" class="btn-next" id="btn-next">
+                Proximo
+              </button>
+              <button type="submit" class="btn-submit" disabled>Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

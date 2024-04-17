@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/77ebc8126c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        background-color: #fff;
+        margin: 50px;
+        box-shadow: 0 50px 75px rgba(0, 0, 0, 0.5);
+      }
+
+      .container .top {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 40px;
+        padding-bottom: 0;
+      }
+
+      .container .top .imgBx {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .container .top .imgBx .box {
+        position: relative;
+        width: 70%;
+        min-width: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        aspect-ratio: 1;
+      }
+
+      .container .top .imgBx .box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
+      }
+
+      .container .top .profileText {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .container .top .profileText h3 {
+        font-size: 1.9rem;
+        letter-spacing: 0.1;
+        line-height: 1.2em;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .container .top .profileText h3 span {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 300;
+        top: -10px;
+      }
+
+      .container .contentBox {
+        position: relative;
+        min-height: 500px;
+        display: table;
+        padding: 0 40px 40px;
+      }
+
+      .container .contentBox h3 {
+        border-left: 4px solid blue;
+        padding-left: 10px;
+        line-height: 1em;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.1em;
+        margin-bottom: 0px;
+        margin-top: 30px;
+      }
+
+      .container .contentBox ul li {
+        list-style: none;
+        line-height: 1em;
+        color: #333;
+        display: flex;
+        margin-top: 24px;
+      }
+
+      .container .contentBox ul li i {
+        font-size: 1rem;
+        margin-right: 10px;
+        color: rgb(84, 183, 244);
+      }
+
+      .container .contentBox ul.education li {
+        flex-direction: column;
+        margin: 25px 0;
+      }
+
+      h5 {
+        color: #3590d2;
+      }
+
+      h4 {
+        color: #333;
+        font-weight: 500;
+        margin: 5px 0px;
+      }
+
+      h6 {
+        color: #666;
+        font-size: 0.8rem;
+      }
+
+      .rightSide {
+        display: table-cell;
+        padding-left: 90px;
+      }
+
+      p {
+        font-style: 300;
+        max-width: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="imgBx">
+          <div class="box"></div>
+        </div>
+
+        <div class="profileText">
+          <h3>{{name}}<br /><span></span></h3>
+        </div>
+      </div>
+      <div class="contentBox">
+        <div class="leftSide">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <span class="icon">Telefone:</span> <br />
+
+              <span
+                style="margin-top: 0.4rem; display: inline-block"
+                class="text"
+                >{{phone}}</span
+              >
+            </li>
+            <li>
+              <span class="icon">Email:</span> <br />
+              <span
+                style="margin-top: 0.3rem; display: inline-block"
+                class="text"
+                >{{email}}</span
+              >
+            </li>
+            <li>
+              <span class="icon">Linkdin:</span><br />
+              <span
+                style="margin-top: 0.3rem; display: inline-block"
+                class="text"
+                >{{linkdin}}</span
+              >
+            </li>
+          </ul>
+          <h3>Formação</h3>
+          <ul class="education">
+            <li>
+              <h5>{{education-year}}</h5>
+              <h4>{{education-course}}</h4>
+              <h6>{{education-name}}</h6>
+            </li>
+          </ul>
+        </div>
+        <div class="rightSide">
+          <div class="about">
+            <h3 style="margin-bottom: 25px">Sobre</h3>
+
+            <p style="width: 450px">{{about-desc}}</p>
+          </div>
+
+          <div class="about">
+            <h3 style="margin-bottom: 15px">Experiencia</h3>
+            <div class="box">
+              <div class="year-company">
+                <h5>{{experience-year}} anos / {{experience-name}}</h5>
+                <h5></h5>
+              </div>
+              <div class="text">
+                <h4 style="margin-top: 0.2rem">{{experience-function}}</h4>
+                <p style="width: 450px">{{experience-desc}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
